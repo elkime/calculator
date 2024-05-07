@@ -4,6 +4,27 @@ const buttonEqual = document.getElementsByName("data-equal");
 const buttonDelete = document.getElementsByName("data-delete");
 let result = document.getElementById('result');
 
-//console.log(buttonEqual);
+buttonNumbers.forEach(function(button){
+    button.addEventListener('click',function(){
+        addNumber(button.innerText);
+    })
+});
 
-console.log(result);
+buttonOpera.forEach(function(button){
+    button.addEventListener('click', function(){
+        electOperation(button.innerText);
+        })
+})
+
+buttonEqual.addEventListener('click', function(){
+    calculate();
+    updateDisplay();
+})
+
+buttonDelete.addEventListener('click', function(){
+    clear();
+    updateDisplay();
+})
+
+
+//console.log();
